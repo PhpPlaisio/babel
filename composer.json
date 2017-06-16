@@ -3,7 +3,6 @@
   "description": "ABC Framework: Babel",
   "keywords": [
     "ABC Framework",
-    "canonical",
     "babel"
   ],
   "require": {

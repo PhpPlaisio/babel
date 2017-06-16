@@ -1,6 +1,6 @@
 <?php
 //----------------------------------------------------------------------------------------------------------------------
-namespace Nahouw;
+namespace SetBased\Abc\Babel;
 
 /**
  * Abstract parent class for objects for retrieving linguistic entities in any language.
