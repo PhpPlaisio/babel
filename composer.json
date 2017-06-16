@@ -1,0 +1,19 @@
+{
+  "name": "setbased/abc-babel",
+  "description": "ABC Framework: Babel",
+  "keywords": [
+    "ABC Framework",
+    "canonical",
+    "babel"
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "SetBased\\Abc\\Babel\\": "src/"
+    }
+  }
+}
