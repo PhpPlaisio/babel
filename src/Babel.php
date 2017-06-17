@@ -43,6 +43,74 @@ abstract class Babel
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns a text in the default language with special characters converted to HTML entities.
+   *
+   * @param int $txtId The ID of the text.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getHtmlText($txtId);
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns a text in the default language using formatting (using
+   * [vsprintf](http://php.net/manual/en/function.vsprintf.php)) with special characters converted to HTML entities.
+   *
+   * @param int   $txtId        The ID of the text.
+   * @param bool  $formatIsHtml If true the format is valid HTML code with special characters converted to HTML
+   *                            entities. Otherwise, the format is plain text and special characters will be converted
+   *                            to HTML entities.
+   * @param bool  $argsAreHtml  If true the arguments are valid HTML code with special characters converted to HTML
+   *                            entities. Otherwise, the arguments are plain text and special characters will be
+   *                            converted to HTML entities.
+   * @param array $args         The parameters for the format string.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getHtmlTextFormatted($txtId, $formatIsHtml, $argsAreHtml, $args);
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns a text in the default language in which substrings are replaced (using
+   * [strtr](http://php.net/manual/en/function.strtr.php)) with special characters converted to HTML entities.
+   *
+   * @param int   $txtId        The ID of the text.
+   * @param bool  $formatIsHtml If true the text is valid HTML code with special characters converted to HTML
+   *                            entities. Otherwise, the text is plain text and special characters will be converted
+   *                            to HTML entities.
+   * @param bool  $argsAreHtml  If true the replace values are valid HTML code with special characters converted to HTML
+   *                            entities. Otherwise, the replace values are plain text and special characters will be
+   *                            converted to HTML entities.
+   * @param array $replacePairs The parameters for the format string.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getHtmlTextReplaced($txtId, $formatIsHtml, $argsAreHtml, $replacePairs);
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns a word in the default language with special characters converted to HTML entities.
+   *
+   * @param int $wrdId The ID of the word.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getHtmlWord($wrdId);
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the ID of the current default language.
    *
    * @return int
