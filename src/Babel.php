@@ -43,6 +43,29 @@ abstract class Babel
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the language code of the current default language.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getCode();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns the direction of the current default language. See [dir](https://www.w3schools.com/tags/att_global_dir.asp)
+   * attribute.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getDir();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns a text in the default language with special characters converted to HTML entities.
    *
    * @param int $txtId The ID of the text.
@@ -122,6 +145,18 @@ abstract class Babel
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the ISO 639-1 language code of the current default language. See
+   * [lang](https://www.w3schools.com/tags/ref_language_codes.asp) attribute.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function getLang();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns a text in the default language.
    *
    * @param int $txtId The ID of the text.
@@ -189,7 +224,7 @@ abstract class Babel
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Sets a new default language.
+   * Sets and pushes a new default language.
    *
    * @param int $lanId The ID of the new default language.
    *
@@ -199,6 +234,19 @@ abstract class Babel
    * @api
    */
   abstract public function pushLanguage($lanId);
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Replace the current default language with a new default language.
+   *
+   * @param int $lanId The ID of the new default language.
+   *
+   * @return void
+   *
+   * @since 1.0.0
+   * @api
+   */
+  abstract public function setLanguage($lanId);
 
   //--------------------------------------------------------------------------------------------------------------------
 }
