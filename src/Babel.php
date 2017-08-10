@@ -9,6 +9,40 @@ abstract class Babel
 {
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * The instance of the Babel class.
+   *
+   * @var Babel
+   */
+  protected static $instance;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Object constructor.
+   *
+   * @since 1.0.0
+   * @api
+   */
+  public function __construct()
+  {
+    self::$instance = $this;
+  }
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns the concrete implementation of this class.
+   *
+   * @return Babel
+   *
+   * @since 1.0.0
+   * @api
+   */
+  public static function getInstance()
+  {
+    return self::$instance;
+  }
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the language code of the current default language.
    *
    * @return string
