@@ -1,9 +1,9 @@
 {
   "name": "setbased/abc-babel",
-  "description": "ABC Framework: Babel",
+  "description": "ABC-Framework: Babel",
   "keywords": [
-    "ABC Framework",
-    "babel"
+    "ABC-Framework",
+    "Babel"
   ],
   "require": {
     "php": ">=7.0.0"
