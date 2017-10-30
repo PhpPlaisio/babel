@@ -6,8 +6,6 @@
 <th>Social</th>
 <th>Legal</th>
 <th>Release</th>
-<th>Tests</th>
-<th>Code</th>
 </tr>
 </thead>
 <tbody>
