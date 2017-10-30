@@ -21,13 +21,11 @@
 <td>
 <a href="https://packagist.org/packages/setbased/abc-babel"><img src="https://poser.pugx.org/setbased/abc-babel/v/stable" alt="Latest Stable Version"/></a>
 </td>
-<td>
-<a href="https://travis-ci.org/SetBased/php-abc-babel"><img src="https://travis-ci.org/SetBased/php-abc-babel.svg?branch=master" alt="Build Status"/></a><br/>
-<a href="https://scrutinizer-ci.com/g/SetBased/php-abc-babel/?branch=master"><img src="https://scrutinizer-ci.com/g/SetBased/php-abc-babel/badges/coverage.png?b=master" alt="Code Coverage"/></a>
-</td>
-<td>
-<a href="https://scrutinizer-ci.com/g/SetBased/php-abc-babel/?branch=master"><img src="https://scrutinizer-ci.com/g/SetBased/php-abc-babel/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"/></a>
-</td>
 </tr>
 </tbody>
 </table>
+
+
+#  License
+
+This project is licensed under the MIT license.

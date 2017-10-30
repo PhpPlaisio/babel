@@ -3,44 +3,10 @@
 namespace SetBased\Abc\Babel;
 
 /**
- * Abstract parent class for objects for retrieving linguistic entities in any language.
+ * Interface for classes for objects for retrieving linguistic entities in any language.
  */
-abstract class Babel
+interface Babel
 {
-  //--------------------------------------------------------------------------------------------------------------------
-  /**
-   * The instance of the Babel class.
-   *
-   * @var Babel
-   */
-  protected static $instance;
-
-  //--------------------------------------------------------------------------------------------------------------------
-  /**
-   * Object constructor.
-   *
-   * @since 1.0.0
-   * @api
-   */
-  public function __construct()
-  {
-    self::$instance = $this;
-  }
-
-  //--------------------------------------------------------------------------------------------------------------------
-  /**
-   * Returns the concrete implementation of this class.
-   *
-   * @return Babel
-   *
-   * @since 1.0.0
-   * @api
-   */
-  public static function getInstance()
-  {
-    return self::$instance;
-  }
-
   //--------------------------------------------------------------------------------------------------------------------
   /**
    * Returns the language code of the current default language.
@@ -50,7 +16,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getCode();
+  public function getCode();
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -62,7 +28,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getDir();
+  public function getDir();
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -75,7 +41,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getHtmlText($txtId);
+  public function getHtmlText($txtId);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -96,7 +62,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getHtmlTextFormatted($txtId, $formatIsHtml, $argsAreHtml, $args);
+  public function getHtmlTextFormatted($txtId, $formatIsHtml, $argsAreHtml, $args);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -117,7 +83,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getHtmlTextReplaced($txtId, $formatIsHtml, $argsAreHtml, $replacePairs);
+  public function getHtmlTextReplaced($txtId, $formatIsHtml, $argsAreHtml, $replacePairs);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -130,7 +96,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getHtmlWord($wrdId);
+  public function getHtmlWord($wrdId);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -141,7 +107,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getLanId();
+  public function getLanId();
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -153,7 +119,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getLang();
+  public function getLang();
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -166,7 +132,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getText($txtId);
+  public function getText($txtId);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -181,7 +147,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getTextFormatted($txtId, $args);
+  public function getTextFormatted($txtId, $args);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -196,7 +162,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getTextReplaced($txtId, $replacePairs);
+  public function getTextReplaced($txtId, $replacePairs);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -209,7 +175,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function getWord($wrdId);
+  public function getWord($wrdId);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -220,7 +186,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function popLanguage();
+  public function popLanguage();
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -233,7 +199,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function pushLanguage($lanId);
+  public function pushLanguage($lanId);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -246,7 +212,7 @@ abstract class Babel
    * @since 1.0.0
    * @api
    */
-  abstract public function setLanguage($lanId);
+  public function setLanguage($lanId);
 
   //--------------------------------------------------------------------------------------------------------------------
 }
