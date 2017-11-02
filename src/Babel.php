@@ -9,6 +9,27 @@ interface Babel
 {
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Completely style date format specifier (Sunday, April 10, 1966).
+   */
+  const FORMAT_FULL = 1;
+
+  /**
+   * Long style date format specifier (April 10, 1966).
+   */
+  const FORMAT_LONG = 2;
+
+  /**
+   * Medium style date format specifier (Apr 10, 1966).
+   */
+  const FORMAT_MEDIUM = 3;
+
+  /**
+   * Short style date format specifier (04/10/1966).
+   */
+  const FORMAT_SHORT = 4;
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the language code of the current default language.
    *
    * @return string
@@ -29,6 +50,26 @@ interface Babel
    * @api
    */
   public function getDir();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns a date formatted according to a date format specifier.
+   *
+   * @param int                   $dateType The date format specifier. One of:
+   *                                        <ul>
+   *                                        <li>Babel::FORMAT_FULL
+   *                                        <li>Babel::FORMAT_LONG
+   *                                        <li>Babel::FORMAT_MEDIUM
+   *                                        <li>Babel::FORMAT_SHORT
+   *                                        </ul>
+   * @param string|\DateTime|null $date     The date.
+   *
+   * @return string
+   *
+   * @since 1.0.0
+   * @api
+   */
+  public function getFormattedDate($dateType, $date);
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
