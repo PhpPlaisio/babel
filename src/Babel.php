@@ -35,7 +35,7 @@ interface Babel
    * @return string
    *
    * @since 1.0.0
-   * @api
+   * @deprecated
    */
   public function getCode();
 
@@ -141,6 +141,17 @@ interface Babel
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
+   * Returns the internal language code of the current language.
+   *
+   * @return string
+   *
+   * @since 2.0.0
+   * @api
+   */
+  public function getInternalCode();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
    * Returns the ID of the current language.
    *
    * @return int
@@ -161,6 +172,28 @@ interface Babel
    * @api
    */
   public function getLang();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns a map from internal language code to the ID of the language for all available languages. In other words
+   * returns an array of which keys are internal language codes and the values are the ID of the corresponding
+   * language.
+   *
+   * @return array
+   */
+  public function getInternalLanguageMap();
+
+  //--------------------------------------------------------------------------------------------------------------------
+  /**
+   * Returns the locale suitable for PHP [setlocale](http://php.net/manual/en/function.setlocale.php) of the current
+   * language.
+   *
+   * @return string
+   *
+   * @since 2.0.0
+   * @api
+   */
+  public function getLocale();
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
