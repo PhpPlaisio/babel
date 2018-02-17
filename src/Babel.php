@@ -145,7 +145,7 @@ interface Babel
    *
    * @return string
    *
-   * @since 2.0.0
+   * @since 1.0.0
    * @api
    */
   public function getInternalCode();
@@ -190,7 +190,7 @@ interface Babel
    *
    * @return string
    *
-   * @since 2.0.0
+   * @since 1.0.0
    * @api
    */
   public function getLocale();
