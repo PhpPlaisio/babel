@@ -1,5 +1,5 @@
 <?php
-//----------------------------------------------------------------------------------------------------------------------
+
 namespace SetBased\Abc\Babel;
 
 /**
@@ -37,7 +37,7 @@ interface Babel
    * @since 1.0.0
    * @deprecated
    */
-  public function getCode();
+  public function getCode(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -49,7 +49,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getDir();
+  public function getDir(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -69,7 +69,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getFormattedDate($dateType, $date);
+  public function getFormattedDate(int $dateType, $date): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -82,7 +82,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getHtmlText($txtId);
+  public function getHtmlText(int $txtId): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -103,7 +103,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getHtmlTextFormatted($txtId, $formatIsHtml, $argsAreHtml, $args);
+  public function getHtmlTextFormatted(int $txtId, bool $formatIsHtml, bool $argsAreHtml, array $args): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -124,7 +124,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getHtmlTextReplaced($txtId, $formatIsHtml, $argsAreHtml, $replacePairs);
+  public function getHtmlTextReplaced(int $txtId, bool $formatIsHtml, bool $argsAreHtml, array $replacePairs): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -137,7 +137,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getHtmlWord($wrdId);
+  public function getHtmlWord(int $wrdId): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -148,9 +148,21 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getInternalCode();
+  public function getInternalCode(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
+
+  /**
+   * Returns a map from internal language code to the ID of the language for all available languages. In other words
+   * returns an array of which keys are internal language codes and the values are the ID of the corresponding
+   * language.
+   *
+   * @return array
+   */
+  public function getInternalLanguageMap(): array;
+
+  //--------------------------------------------------------------------------------------------------------------------
+
   /**
    * Returns the ID of the current language.
    *
@@ -159,9 +171,10 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getLanId();
+  public function getLanId(): int;
 
   //--------------------------------------------------------------------------------------------------------------------
+
   /**
    * Returns the ISO 639-1 language code of the current language. See
    * [lang](https://www.w3schools.com/tags/ref_language_codes.asp) attribute.
@@ -171,19 +184,10 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getLang();
+  public function getLang(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
-  /**
-   * Returns a map from internal language code to the ID of the language for all available languages. In other words
-   * returns an array of which keys are internal language codes and the values are the ID of the corresponding
-   * language.
-   *
-   * @return array
-   */
-  public function getInternalLanguageMap();
 
-  //--------------------------------------------------------------------------------------------------------------------
   /**
    * Returns the locale suitable for PHP [setlocale](http://php.net/manual/en/function.setlocale.php) of the current
    * language.
@@ -193,7 +197,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getLocale();
+  public function getLocale(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -206,7 +210,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getText($txtId);
+  public function getText(int $txtId): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -221,7 +225,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getTextFormatted($txtId, $args);
+  public function getTextFormatted(int $txtId, array $args): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -236,7 +240,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getTextReplaced($txtId, $replacePairs);
+  public function getTextReplaced(int $txtId, array $replacePairs): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -249,7 +253,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function getWord($wrdId);
+  public function getWord(int $wrdId): string;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -260,7 +264,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function popLanguage();
+  public function popLanguage(): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -273,7 +277,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function pushLanguage($lanId);
+  public function pushLanguage(int $lanId): void;
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
@@ -286,7 +290,7 @@ interface Babel
    * @since 1.0.0
    * @api
    */
-  public function setLanguage($lanId);
+  public function setLanguage(int $lanId): void;
 
   //--------------------------------------------------------------------------------------------------------------------
 }
