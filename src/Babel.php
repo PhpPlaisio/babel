@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace SetBased\Abc\Babel;
 
 /**
- * Interface for classes for objects for retrieving linguistic entities in any language.
+ * Interface for retrieving linguistic entities in any language.
  */
 interface Babel
 {

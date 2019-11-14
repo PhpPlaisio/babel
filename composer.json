@@ -1,18 +1,17 @@
 {
-  "name": "setbased/abc-babel",
-  "description": "ABC-Framework: Babel",
+  "name": "plaisio/babel",
+  "description": "PhpPlaisio: Babel",
   "keywords": [
-    "ABC-Framework",
+    "PhpPlaisio",
     "Babel"
   ],
+  "license": "MIT",
   "require": {
     "php": ">=7.1.0"
   },
-  "type": "library",
-  "license": "MIT",
   "autoload": {
     "psr-4": {
-      "SetBased\\Abc\\Babel\\": "src/"
+      "Plaisio\\Babel\\": "src/"
     }
   }
 }
