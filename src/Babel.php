@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace SetBased\Abc\Babel;
+namespace Plaisio\Babel;
 
 /**
  * Interface for retrieving linguistic entities in any language.
