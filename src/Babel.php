@@ -5,6 +5,8 @@ namespace Plaisio\Babel;
 
 /**
  * Interface for retrieving linguistic entities in any language.
+ *
+ * @property-read int $lanId the ID of the current language.
  */
 interface Babel
 {
@@ -163,19 +165,6 @@ interface Babel
   public function getInternalLanguageMap(): array;
 
   //--------------------------------------------------------------------------------------------------------------------
-
-  /**
-   * Returns the ID of the current language.
-   *
-   * @return int
-   *
-   * @since 1.0.0
-   * @api
-   */
-  public function getLanId(): int;
-
-  //--------------------------------------------------------------------------------------------------------------------
-
   /**
    * Returns the ISO 639-1 language code of the current language. See
    * [lang](https://www.w3schools.com/tags/ref_language_codes.asp) attribute.
@@ -188,7 +177,6 @@ interface Babel
   public function getLang(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
-
   /**
    * Returns the locale suitable for PHP [setlocale](http://php.net/manual/en/function.setlocale.php) of the current
    * language.
