@@ -1,0 +1,9 @@
+<kernel>
+    <properties>
+        <property>
+            <type>\Plaisio\Babel\Babel</type>
+            <name>babel</name>
+            <description>The helper object for retrieving linguistic entities.</description>
+        </property>
+    </properties>
+</kernel>
