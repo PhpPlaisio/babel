@@ -33,17 +33,6 @@ interface Babel
 
   //--------------------------------------------------------------------------------------------------------------------
   /**
-   * Returns the internal language code of the current language.
-   *
-   * @return string
-   *
-   * @since 1.0.0
-   * @deprecated
-   */
-  public function getCode(): string;
-
-  //--------------------------------------------------------------------------------------------------------------------
-  /**
    * Returns the direction of the current language. See [dir](https://www.w3schools.com/tags/att_global_dir.asp)
    * attribute.
    *
@@ -154,7 +143,6 @@ interface Babel
   public function getInternalCode(): string;
 
   //--------------------------------------------------------------------------------------------------------------------
-
   /**
    * Returns a map from internal language code to the ID of the language for all available languages. In other words
    * returns an array of which keys are internal language codes and the values are the ID of the corresponding
